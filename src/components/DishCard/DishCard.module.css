@@ -1,0 +1,123 @@
+.container {
+  padding: 32px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imageWrap {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.timeBadge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #555;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.body {
+  padding: 20px;
+}
+
+.name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin: 0 0 8px;
+}
+
+.desc {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+.ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.ingredient {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shareBtn {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #e0d5c8;
+  border-radius: 14px;
+  background: transparent;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.shareBtn:hover {
+  border-color: #c0392b;
+  color: #c0392b;
+  background: rgba(192, 57, 43, 0.04);
+}
+
+.empty {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  color: #95a5a6;
+  padding: 60px 20px;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

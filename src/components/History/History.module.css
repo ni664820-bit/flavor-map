@@ -1,0 +1,67 @@
+.container {
+  padding: 32px 0;
+}
+
+.heading {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  color: #2c3e50;
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.scrollRow {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 8px 4px 16px;
+  scrollbar-width: thin;
+  scrollbar-color: #d5c8b8 transparent;
+  justify-content: flex-start;
+}
+
+.scrollRow::-webkit-scrollbar {
+  height: 6px;
+}
+.scrollRow::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollRow::-webkit-scrollbar-thumb {
+  background: #d5c8b8;
+  border-radius: 3px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 110px;
+  padding: 8px;
+  border: 2px solid #e0d5c8;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.card:hover {
+  border-color: #c0392b;
+}
+
+.thumb {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.name {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  color: #555;
+  text-align: center;
+  line-height: 1.3;
+  max-width: 100px;
+}

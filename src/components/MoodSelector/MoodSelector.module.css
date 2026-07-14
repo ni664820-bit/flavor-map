@@ -1,0 +1,76 @@
+.container {
+  padding: 32px 0;
+}
+
+.heading {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.moodBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 20px;
+  border: 2px solid #e0d5c8;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.moodBtn:hover {
+  border-color: #c0392b;
+  box-shadow: 0 4px 20px rgba(192, 57, 43, 0.15);
+}
+
+.active {
+  border-color: #c0392b;
+  background: rgba(192, 57, 43, 0.08);
+  box-shadow: 0 4px 20px rgba(192, 57, 43, 0.2);
+}
+
+.emoji {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.label {
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.active .label {
+  color: #c0392b;
+}
+
+@media (max-width: 480px) {
+  .moodBtn {
+    min-width: 80px;
+    padding: 12px 14px;
+  }
+  .emoji {
+    font-size: 1.6rem;
+  }
+  .label {
+    font-size: 0.75rem;
+  }
+}

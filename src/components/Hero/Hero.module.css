@@ -1,0 +1,57 @@
+.hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5f0e8 0%, #e8ddd0 50%, #f0e6d8 100%);
+  padding: 60px 20px 40px;
+}
+
+.ingredientsLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ingredient {
+  position: absolute;
+  opacity: 0.35;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  user-select: none;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #2c3e50;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: #7f8c8d;
+  margin: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 40vh;
+    padding: 40px 16px 30px;
+  }
+  .ingredient {
+    opacity: 0.2;
+  }
+}
